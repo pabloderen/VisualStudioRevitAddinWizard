@@ -35,9 +35,19 @@ namespace $safeprojectname$
         /// <param name="cmddata_p"></param>
         public MainForm(ExternalCommandData cmddata_p)
         {
-
+            this.DataContext = this;
             this.p_commanddata = cmddata_p;
             InitializeComponent();
         }
-    }
+
+        public string projectName = App.NameSpaceNm;
+
+        public string ProjectName
+        {
+            get { return projectName; }
+            set { projectName = value; }
+        }
+
+
+}
 }

@@ -13,11 +13,22 @@ namespace $safeprojectname$
     class App : IExternalApplication
     {
 
-        public Result OnStartup(UIControlledApplication application)
+    static Type myType = typeof(App);
+    static string nameSpaceNm = myType.Namespace;
+
+    public static string NameSpaceNm
+
+    {
+
+        get { return nameSpaceNm; }
+
+        set { nameSpaceNm = value; }
+
+    }
+
+    public Result OnStartup(UIControlledApplication application)
         {
 
-             var myType = typeof(App);
-             string nameSpaceNm = myType.Namespace;
 
              // Get the absolut path of this assembly
              string ExecutingAssemblyPath = System.Reflection.Assembly.GetExecutingAssembly(
@@ -25,25 +36,25 @@ namespace $safeprojectname$
 
             // Create a ribbon panel
             RibbonPanel m_projectPanel = application.CreateRibbonPanel(
-                nameSpaceNm);
+                NameSpaceNm);
 
         //Execute File location
-        string fileLctn = nameSpaceNm + ".MainCommand";
+        string fileLctn = NameSpaceNm + ".MainCommand";
 
             //Button
         PushButton pushButton = m_projectPanel.AddItem(new PushButtonData(
-                nameSpaceNm, nameSpaceNm, ExecutingAssemblyPath,
+                NameSpaceNm, NameSpaceNm, ExecutingAssemblyPath,
                 fileLctn)) as PushButton;
 
             //Add Help ToolTip 
-            pushButton.ToolTip = nameSpaceNm;
+            pushButton.ToolTip = NameSpaceNm;
 
             //Add long description 
             pushButton.LongDescription =
              "This addin helps you to ...";
 
             //Icon file location
-            string iconFlLctn = nameSpaceNm + ".Resources.Icon.png";
+            string iconFlLctn = NameSpaceNm + ".Resources.Icon.png";
 
             // Set the large image shown on button.
             pushButton.LargeImage = PngImageSource(
