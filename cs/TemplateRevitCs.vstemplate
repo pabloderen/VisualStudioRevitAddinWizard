@@ -20,8 +20,10 @@
             <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.csproj.user">TemplateRevitCs.csproj.user</ProjectItem>
             <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.addin">RegisterAddin.addin</ProjectItem>
             <ProjectItem ReplaceParameters="true">App.cs</ProjectItem>
-            <ProjectItem ReplaceParameters="true">Command.cs</ProjectItem>
             <ProjectItem ReplaceParameters="true">Properties\AssemblyInfo.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">MainForm.xaml</ProjectItem>
+			<ProjectItem ReplaceParameters="true">MainForm.xaml.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Resources\Icon.png</ProjectItem>
         </Project>
     </TemplateContent>
 </VSTemplate>
