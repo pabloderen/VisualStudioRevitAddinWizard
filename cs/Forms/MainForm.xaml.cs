@@ -48,6 +48,15 @@ namespace $safeprojectname$
             set { projectName = value; }
         }
 
+        /// <summary>
+        /// Button close form when clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+        this.Close();
+        }
 
 }
 }

@@ -19,11 +19,22 @@
         <Project ReplaceParameters="true" File="TemplateRevitCs.csproj">
             <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.csproj.user">TemplateRevitCs.csproj.user</ProjectItem>
             <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.addin">RegisterAddin.addin</ProjectItem>
-            <ProjectItem ReplaceParameters="true">App.cs</ProjectItem>
             <ProjectItem ReplaceParameters="true">Properties\AssemblyInfo.cs</ProjectItem>
-			<ProjectItem ReplaceParameters="true">MainForm.xaml</ProjectItem>
-			<ProjectItem ReplaceParameters="true">MainForm.xaml.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Forms/MainForm.xaml</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Forms/MainForm.xaml.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Forms/Resources.xaml</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Forms/Resources.xaml.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Forms/StyleableWindow\ControlDoubleClickBehavior.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Forms/StyleableWindow\ShowSystemMenuBehavior.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Forms/StyleableWindow\SystemMenuManager.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Forms/StyleableWindow\WindowCloseCommand.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Forms/StyleableWindow\WindowDragBehavior.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Forms/StyleableWindow\WindowMaximizeCommand.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Forms/StyleableWindow\WindowMinimizeCommand.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Forms/StyleableWindow\WindowResizeBehavior.cs</ProjectItem>
 			<ProjectItem ReplaceParameters="true">Resources\Icon.png</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Utils.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">App.cs</ProjectItem>
         </Project>
     </TemplateContent>
 </VSTemplate>

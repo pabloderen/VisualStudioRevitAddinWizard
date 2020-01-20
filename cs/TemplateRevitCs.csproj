@@ -55,10 +55,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
-    <Compile Include="MainForm.xaml.cs">
+    <Compile Include="Forms\MainForm.xaml.cs">
       <DependentUpon>MainForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\Resources.xaml.cs">
+      <DependentUpon>Resources.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StyleableWindow\ControlDoubleClickBehavior.cs" />
+    <Compile Include="Forms\StyleableWindow\ShowSystemMenuBehavior.cs" />
+    <Compile Include="Forms\StyleableWindow\SystemMenuManager.cs" />
+    <Compile Include="Forms\StyleableWindow\WindowCloseCommand.cs" />
+    <Compile Include="Forms\StyleableWindow\WindowDragBehavior.cs" />
+    <Compile Include="Forms\StyleableWindow\WindowMaximizeCommand.cs" />
+    <Compile Include="Forms\StyleableWindow\WindowMinimizeCommand.cs" />
+    <Compile Include="Forms\StyleableWindow\WindowResizeBehavior.cs" />
+    <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="$projectname$.addin" />
@@ -66,9 +78,13 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Page Include="MainForm.xaml">
+    <Page Include="Forms\MainForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
