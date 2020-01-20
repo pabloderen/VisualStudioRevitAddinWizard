@@ -34,7 +34,7 @@ For a full discussion of that and comparison of the two, please refer to the dis
 the [New Visual Studio Templates for Revit Add-Ins](http://thebuildingcoder.typepad.com/blog/2017/02/new-visual-studio-2015-templates-for-revit-add-ins.html).
 
 
-## Author
+## Original Author
 
 Jeremy Tammik,
 [The 3D Web Coder](http://the3dwebcoder.typepad.com) and
