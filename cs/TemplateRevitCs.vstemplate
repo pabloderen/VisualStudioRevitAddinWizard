@@ -33,7 +33,7 @@
 			<ProjectItem ReplaceParameters="true">Forms/StyleableWindow\WindowMinimizeCommand.cs</ProjectItem>
 			<ProjectItem ReplaceParameters="true">Forms/StyleableWindow\WindowResizeBehavior.cs</ProjectItem>
 			<ProjectItem ReplaceParameters="true">Resources\Icon.png</ProjectItem>
-			<ProjectItem ReplaceParameters="true">Utils.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Utils/Util.cs</ProjectItem>
 			<ProjectItem ReplaceParameters="true">App.cs</ProjectItem>
         </Project>
     </TemplateContent>
