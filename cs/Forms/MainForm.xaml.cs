@@ -41,19 +41,24 @@ namespace $safeprojectname$
         }
 
         public string projectName = App.NameSpaceNm;
-
         public string ProjectName
         {
             get { return projectName; }
             set { projectName = value; }
         }
 
-        /// <summary>
-        /// Button close form when clicked
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Close_Click(object sender, RoutedEventArgs e)
+        public string projectVersion = CommonAssemblyInfo.Number;
+        public string ProjectVersion
+        {
+        get { return projectVersion; }
+        set { projectVersion = value; }
+        }
+    /// <summary>
+    /// Button close form when clicked
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    private void Close_Click(object sender, RoutedEventArgs e)
         {
         this.Close();
         }

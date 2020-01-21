@@ -14,6 +14,7 @@
     <!-- Colors of the Title Bar-->
     <SolidColorBrush x:Key="WindowBackColor" Color="Gray"/>
     <!--Color of the tittle of the Main form-->
+    <!--Color of the tittle of the Main form-->
     <SolidColorBrush x:Key="WindowForeColor" Color="Transparent"/>
     <!--Color of the tittle of the Main form when hovered-->
     <SolidColorBrush x:Key="WindowForeHighlightColor" Color="White"/>

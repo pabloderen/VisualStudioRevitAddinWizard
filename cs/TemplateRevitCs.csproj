@@ -73,6 +73,7 @@
     <Compile Include="Forms\StyleableWindow\WindowMaximizeCommand.cs" />
     <Compile Include="Forms\StyleableWindow\WindowMinimizeCommand.cs" />
     <Compile Include="Forms\StyleableWindow\WindowResizeBehavior.cs" />
+    <Compile Include="Utils\CommonAssemblyInfo.cs" />
     <Compile Include="Utils\Util.cs" />
   </ItemGroup>
   <ItemGroup>

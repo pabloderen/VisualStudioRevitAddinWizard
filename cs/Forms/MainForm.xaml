@@ -21,8 +21,8 @@
             <Button Style="{DynamicResource CloseButtonStyle}" Name="CloseButton" Foreground="Black" BorderThickness="0" Click="Close_Click" Background="Transparent" VerticalAlignment="Top" Height="21" FontSize="16" FontWeight="Bold" Margin="191,12,11,0">X</Button>
 
             <!--Main Form elements-->
-            <Label Style="{DynamicResource Labels}" Content="Placeholder" Margin="10,54,0,0" Height="24" VerticalAlignment="Top" FontFamily="Roboto" HorizontalAlignment="Left" Width="82" RenderTransformOrigin="0.776,0.792" />
-            <Button Name="button" Style="{DynamicResource MainButtonStyle}" Content="Button" HorizontalAlignment="Left" Margin="5,183,0,0" VerticalAlignment="Top" Width="213" Tag="" />
+            <Label Style="{DynamicResource Labels}" Content="{Binding Path=ProjectVersion}" Margin="69,216,0,0" Height="24" VerticalAlignment="Top" FontFamily="Roboto" HorizontalAlignment="Left" Width="82" RenderTransformOrigin="0.776,0.792" />
+            <Button Name="button" Style="{DynamicResource MainButtonStyle}" Content="Button" HorizontalAlignment="Left" Margin="5,178,0,0" VerticalAlignment="Top" Width="213" Tag="" />
         </Grid>
     </Border>
 
