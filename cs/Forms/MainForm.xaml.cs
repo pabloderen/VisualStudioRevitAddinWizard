@@ -53,6 +53,15 @@ namespace $safeprojectname$
         get { return projectVersion; }
         set { projectVersion = value; }
         }
+
+    private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+
+    {
+
+        this.DragMove();
+
+    }
+
     /// <summary>
     /// Button close form when clicked
     /// </summary>
