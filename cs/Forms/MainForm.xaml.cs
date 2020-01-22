@@ -72,5 +72,10 @@ namespace $safeprojectname$
         this.Close();
         }
 
+
+    private void Title_Link(object sender, RoutedEventArgs e)
+    {
+        System.Diagnostics.Process.Start("https://google.com");
+    }
 }
 }
