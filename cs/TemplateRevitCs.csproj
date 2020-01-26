@@ -58,21 +58,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
-    <Compile Include="Forms\MainForm.xaml.cs">
+    <Compile Include="Views\MainForm.xaml.cs">
       <DependentUpon>MainForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Forms\Resources.xaml.cs">
+    <Compile Include="Views\Resources.xaml.cs">
       <DependentUpon>Resources.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Forms\StyleableWindow\ControlDoubleClickBehavior.cs" />
-    <Compile Include="Forms\StyleableWindow\ShowSystemMenuBehavior.cs" />
-    <Compile Include="Forms\StyleableWindow\SystemMenuManager.cs" />
-    <Compile Include="Forms\StyleableWindow\WindowCloseCommand.cs" />
-    <Compile Include="Forms\StyleableWindow\WindowDragBehavior.cs" />
-    <Compile Include="Forms\StyleableWindow\WindowMaximizeCommand.cs" />
-    <Compile Include="Forms\StyleableWindow\WindowMinimizeCommand.cs" />
-    <Compile Include="Forms\StyleableWindow\WindowResizeBehavior.cs" />
+    <Compile Include="Views\StyleableWindow\ControlDoubleClickBehavior.cs" />
+    <Compile Include="Views\StyleableWindow\ShowSystemMenuBehavior.cs" />
+    <Compile Include="Views\StyleableWindow\SystemMenuManager.cs" />
+    <Compile Include="Views\StyleableWindow\WindowCloseCommand.cs" />
+    <Compile Include="Views\StyleableWindow\WindowDragBehavior.cs" />
+    <Compile Include="Views\StyleableWindow\WindowMaximizeCommand.cs" />
+    <Compile Include="Views\StyleableWindow\WindowMinimizeCommand.cs" />
+    <Compile Include="Views\StyleableWindow\WindowResizeBehavior.cs" />
     <Compile Include="Utils\CommonAssemblyInfo.cs" />
     <Compile Include="Utils\Util.cs" />
   </ItemGroup>
@@ -82,20 +82,22 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Page Include="Forms\MainForm.xaml">
+    <Page Include="Views\MainForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Forms\Resources.xaml">
+    <Page Include="Views\Resources.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>if exist "$(AppData)\Autodesk\REVIT\Addins\2020" copy "$(ProjectDir)*.addin" "$(AppData)\Autodesk\REVIT\Addins\2020"
-if exist "$(AppData)\Autodesk\REVIT\Addins\2020" copy "$(ProjectDir)$(OutputPath)*.dll" "$(AppData)\Autodesk\REVIT\Addins\2020"
-"C:\Program Files (x86)\Windows Kits\10\App Certification Kit\signtool.exe" sign /f  "$(ProjectDir)\Engworks.pfx" /p Engw123. /t http://timestamp.verisign.com/scripts/timstamp.dll "$(ProjectDir)$(OutputPath)*.dll"</PostBuildEvent>
+    <PostBuildEvent>if $(ConfigurationName) == Debug if exist "$(AppData)\Autodesk\REVIT\Addins\2019" copy "$(ProjectDir)*.addin" "$(AppData)\Autodesk\REVIT\Addins\2019"
+if $(ConfigurationName) == Debug if exist "$(AppData)\Autodesk\REVIT\Addins\2019" copy "$(ProjectDir)$(OutputPath)*.dll" "$(AppData)\Autodesk\REVIT\Addins\2019"
+if $(ConfigurationName) == Release if exist "$(ProjectDir)\Engworks.pfx" "C:\Program Files (x86)\Windows Kits\10\App Certification Kit\signtool.exe" sign /f  "$(ProjectDir)\Engworks.pfx" /p Engw123. /t http://timestamp.verisign.com/scripts/timstamp.dll "$(ProjectDir)$(OutputPath)*.dll"
+if $(ConfigurationName) == Release copy "$(ProjectDir)*.addin" "$(ProjectDir)$(OutputPath)"
+if $(ConfigurationName) == Release (powershell Compress-Archive -Path '$(ProjectDir)$(OutputPath)*.dll', '$(ProjectDir)$(OutputPath)*.addin' -DestinationPath '$(ProjectDir)$(OutputPath)$(ProjectName)' -Force)</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
