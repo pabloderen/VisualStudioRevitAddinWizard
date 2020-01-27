@@ -20,18 +20,18 @@
             <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.csproj.user">TemplateRevitCs.csproj.user</ProjectItem>
             <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.addin">RegisterAddin.addin</ProjectItem>
             <ProjectItem ReplaceParameters="true">Properties\AssemblyInfo.cs</ProjectItem>
-			<ProjectItem ReplaceParameters="true">Forms/MainForm.xaml</ProjectItem>
-			<ProjectItem ReplaceParameters="true">Forms/MainForm.xaml.cs</ProjectItem>
-			<ProjectItem ReplaceParameters="true">Forms/Resources.xaml</ProjectItem>
-			<ProjectItem ReplaceParameters="true">Forms/Resources.xaml.cs</ProjectItem>
-			<ProjectItem ReplaceParameters="true">Forms/StyleableWindow\ControlDoubleClickBehavior.cs</ProjectItem>
-			<ProjectItem ReplaceParameters="true">Forms/StyleableWindow\ShowSystemMenuBehavior.cs</ProjectItem>
-			<ProjectItem ReplaceParameters="true">Forms/StyleableWindow\SystemMenuManager.cs</ProjectItem>
-			<ProjectItem ReplaceParameters="true">Forms/StyleableWindow\WindowCloseCommand.cs</ProjectItem>
-			<ProjectItem ReplaceParameters="true">Forms/StyleableWindow\WindowDragBehavior.cs</ProjectItem>
-			<ProjectItem ReplaceParameters="true">Forms/StyleableWindow\WindowMaximizeCommand.cs</ProjectItem>
-			<ProjectItem ReplaceParameters="true">Forms/StyleableWindow\WindowMinimizeCommand.cs</ProjectItem>
-			<ProjectItem ReplaceParameters="true">Forms/StyleableWindow\WindowResizeBehavior.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Views/MainForm.xaml</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Views/MainForm.xaml.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Views/Resources.xaml</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Views/Resources.xaml.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Views/StyleableWindow\ControlDoubleClickBehavior.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Views/StyleableWindow\ShowSystemMenuBehavior.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Views/StyleableWindow\SystemMenuManager.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Views/StyleableWindow\WindowCloseCommand.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Views/StyleableWindow\WindowDragBehavior.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Views/StyleableWindow\WindowMaximizeCommand.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Views/StyleableWindow\WindowMinimizeCommand.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Views/StyleableWindow\WindowResizeBehavior.cs</ProjectItem>
 			<ProjectItem ReplaceParameters="true">Resources\Icon.png</ProjectItem>
 			<ProjectItem ReplaceParameters="true">Utils/Util.cs</ProjectItem>
 			<ProjectItem ReplaceParameters="true">Utils/CommonAssemblyInfo.cs</ProjectItem>
