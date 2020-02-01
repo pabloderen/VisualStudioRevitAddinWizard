@@ -80,7 +80,10 @@
     <Content Include="$projectname$.addin" />
     <EmbeddedResource Include="Resources\Icon.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Core\" />
+    <Folder Include="Model\" />
+  </ItemGroup>
   <ItemGroup>
     <Page Include="Views\MainForm.xaml">
       <SubType>Designer</SubType>
