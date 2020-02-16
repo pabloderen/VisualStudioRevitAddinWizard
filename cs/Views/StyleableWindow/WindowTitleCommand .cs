@@ -8,8 +8,8 @@ using System.Windows.Input;
 
 namespace WpfStyleableWindow.StyleableWindow
 {
-    public class WindowMinimizeCommand :ICommand
-    {     
+    public class WindowTitleCommand : ICommand
+    {
 
         public bool CanExecute(object parameter)
         {
@@ -24,8 +24,10 @@ namespace WpfStyleableWindow.StyleableWindow
 
             if (window != null)
             {
-                window.WindowState = WindowState.Minimized;
+                System.Diagnostics.Process.Start("https://google.com");
             }
         }
+
+
     }
 }

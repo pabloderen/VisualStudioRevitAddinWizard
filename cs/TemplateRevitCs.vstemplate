@@ -28,10 +28,10 @@
 			<ProjectItem ReplaceParameters="true">Views/StyleableWindow\ShowSystemMenuBehavior.cs</ProjectItem>
 			<ProjectItem ReplaceParameters="true">Views/StyleableWindow\SystemMenuManager.cs</ProjectItem>
 			<ProjectItem ReplaceParameters="true">Views/StyleableWindow\WindowCloseCommand.cs</ProjectItem>
-			<ProjectItem ReplaceParameters="true">Views/StyleableWindow\WindowDragBehavior.cs</ProjectItem>
-			<ProjectItem ReplaceParameters="true">Views/StyleableWindow\WindowMaximizeCommand.cs</ProjectItem>
-			<ProjectItem ReplaceParameters="true">Views/StyleableWindow\WindowMinimizeCommand.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Views/StyleableWindow\WindowDragBehavior.cs</ProjectItem>		
 			<ProjectItem ReplaceParameters="true">Views/StyleableWindow\WindowResizeBehavior.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Views/StyleableWindow\WPFProperties.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Views/StyleableWindow\WindowTitleCommand .cs</ProjectItem>		 
 			<ProjectItem ReplaceParameters="true">Resources\Icon.png</ProjectItem>
 			<ProjectItem ReplaceParameters="true">Utils/Util.cs</ProjectItem>
 			<ProjectItem ReplaceParameters="true">Utils/CommonAssemblyInfo.cs</ProjectItem>

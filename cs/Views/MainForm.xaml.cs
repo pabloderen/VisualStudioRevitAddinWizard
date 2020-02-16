@@ -28,7 +28,6 @@ namespace $safeprojectname$
     public UIApplication uiApp;
 
 
-
         /// <summary>
         /// Check if the suffix is a number or not
         /// </summary>
@@ -47,35 +46,16 @@ namespace $safeprojectname$
             set { projectName = value; }
         }
 
-        public string projectVersion = CommonAssemblyInfo.Number;
-        public string ProjectVersion
-        {
-        get { return projectVersion; }
-        set { projectVersion = value; }
-        }
-
-    private void Border_MouseDown(object sender, MouseButtonEventArgs e)
-
+    private void Border_MouseDown
+     (object sender, MouseButtonEventArgs e)
     {
-
         this.DragMove();
-
     }
-
-    /// <summary>
-    /// Button close form when clicked
-    /// </summary>
-    /// <param name="sender"></param>
-    /// <param name="e"></param>
-    private void Close_Click(object sender, RoutedEventArgs e)
-        {
-        this.Close();
-        }
-
-
-    private void Title_Link(object sender, RoutedEventArgs e)
+    private void TBox_TextChanged
+        (object sender, TextChangedEventArgs e)
     {
-        System.Diagnostics.Process.Start("https://google.com");
+        TBox.Select(this.TBox.Text.Length, 0);
     }
+
 }
 }
