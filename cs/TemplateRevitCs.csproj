@@ -105,17 +105,19 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>if $(ConfigurationName) == 2017 if exist "$(AppData)\Autodesk\REVIT\Addins\2017" copy "$(ProjectDir)*.addin" "$(AppData)\Autodesk\REVIT\Addins\2017"
-if $(ConfigurationName) == 2017 if exist "$(AppData)\Autodesk\REVIT\Addins\2017" copy "$(ProjectDir)$(OutputPath)*.dll" "$(AppData)\Autodesk\REVIT\Addins\2017"
-if $(ConfigurationName) == 2018 if exist "$(AppData)\Autodesk\REVIT\Addins\2018" copy "$(ProjectDir)*.addin" "$(AppData)\Autodesk\REVIT\Addins\2018"
-if $(ConfigurationName) == 2018 if exist "$(AppData)\Autodesk\REVIT\Addins\2018" copy "$(ProjectDir)$(OutputPath)*.dll" "$(AppData)\Autodesk\REVIT\Addins\2018"
-if $(ConfigurationName) == 2019 if exist "$(AppData)\Autodesk\REVIT\Addins\2019" copy "$(ProjectDir)*.addin" "$(AppData)\Autodesk\REVIT\Addins\2019"
-if $(ConfigurationName) == 2019 if exist "$(AppData)\Autodesk\REVIT\Addins\2019" copy "$(ProjectDir)$(OutputPath)*.dll" "$(AppData)\Autodesk\REVIT\Addins\2019"
-if $(ConfigurationName) == 2020 if exist "$(AppData)\Autodesk\REVIT\Addins\2020" copy "$(ProjectDir)*.addin" "$(AppData)\Autodesk\REVIT\Addins\2020"
-if $(ConfigurationName) == 2020 if exist "$(AppData)\Autodesk\REVIT\Addins\2020" copy "$(ProjectDir)$(OutputPath)*.dll" "$(AppData)\Autodesk\REVIT\Addins\2020"
-if not $(ConfigurationName) == Debug if exist "$(ProjectDir)\Engworks.pfx" "C:\Program Files (x86)\Windows Kits\10\App Certification Kit\signtool.exe" sign /f  "$(ProjectDir)\Engworks.pfx" /p Engw123. /t http://timestamp.verisign.com/scripts/timstamp.dll "$(ProjectDir)$(OutputPath)*.dll"
-if not $(ConfigurationName) == Debug copy "$(ProjectDir)*.addin" "$(ProjectDir)$(OutputPath)"
-if not $(ConfigurationName) == Debug (powershell Compress-Archive -Path '$(ProjectDir)$(OutputPath)*.dll', '$(ProjectDir)$(OutputPath)*.addin' -DestinationPath '$(ProjectDir)$(OutputPath)$(ProjectName)' -Force)</PostBuildEvent>
+    <PostBuildEvent>
+    if exist "$(AppData)\Autodesk\REVIT\Addins\$(ConfigurationName)" copy "$(ProjectDir)*.addin" "$(AppData)\Autodesk\REVIT\Addins\$(ConfigurationName)"
+mkdir "$(TargetDir)$(ProjectName)\"
+copy "$(TargetDir)*.dll" "$(TargetDir)$(ProjectName)"
+copy "$(TargetDir)*.pdb" "$(TargetDir)$(ProjectName)"
+copy "$(TargetDir)*.rfa" "$(TargetDir)$(ProjectName)"
+mkdir "$(AppData)\Autodesk\REVIT\Addins\$(ConfigurationName)\$(ProjectName)\"
+if exist "$(AppData)\Autodesk\REVIT\Addins\$(ConfigurationName)" copy "$(ProjectDir)$(OutputPath)*.dll" "$(AppData)\Autodesk\REVIT\Addins\$(ConfigurationName)\$(ProjectName)"
+if exist "$(AppData)\Autodesk\REVIT\Addins\$(ConfigurationName)" copy "$(ProjectDir)$(OutputPath)*.pdb" "$(AppData)\Autodesk\REVIT\Addins\$(ConfigurationName)\$(ProjectName)"
+if exist "$(AppData)\Autodesk\REVIT\Addins\$(ConfigurationName)" copy "$(ProjectDir)$(OutputPath)*.rfa" "$(AppData)\Autodesk\REVIT\Addins\$(ConfigurationName)\$(ProjectName)"
+if not $(ConfigurationName) == Debug copy "$(ProjectDir)*.addin" "$(TargetDir)"
+if not $(ConfigurationName) == Debug (powershell Compress-Archive -Path '$(TargetDir)$(ProjectName)', '$(ProjectDir)$(OutputPath)*.addin' -DestinationPath '$(TargetDir)$(ConfigurationName)' -Force)
+rd /s /q "$(TargetDir)$(ProjectName)"
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
